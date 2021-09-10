@@ -1,0 +1,18 @@
+1.值类型和引用类型
+值类型： int float double char bool struct enum byte
+引用类型: string class delegate interface 数组
+2.请简述值类型与引用类型的区别
+(1)值类型存储在内存栈中，引用类型存储在内存堆中
+(2)值类型存储块，引用类型存储慢
+(3)栈的内存是自动释放的 堆中的内存是由.Net的GC自动释放的
+(4)引用类型都是继承自System.ValueType  引用类型都是继承自System.Object
+3.C#中所有引用类型的基类是什么
+System.Object
+4.请简述ArrayList和List的主要区别
+ArrayList类型不安全 使用时会把数据作为Object进行操作 带来装拆箱的操作
+List是泛型 就避免了这种不安全以及装拆箱所带来的消耗
+5.请简述GC（垃圾回收）产生的原因，并描述如何避免？
+GC回收堆中不用的内存
+(1)减少new长生对象的次数
+(2)使用公共的对象（Static）
+(3)将String换为StringBuilder
